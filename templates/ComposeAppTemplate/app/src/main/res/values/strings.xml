@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ComposeAppTemplate</string>
+    <string name="nav_home">主页</string>
+    <string name="version_txt">版本：%1$s</string>
 </resources>

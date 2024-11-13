@@ -1,4 +1,4 @@
-package com.welldone.composeapptemplate.ui.theme
+package com.welldone.composeapptemplate.utils.theme
 
 import android.app.Activity
 import android.os.Build
