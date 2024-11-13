@@ -22,8 +22,11 @@ $baseDir = "ComposeAppTemplate"
 # 移动main文件
 MoveNamespaceFiles $baseDir $namespace "app\src\main"
 
-# 移动测试目录文件
+# 移动Android测试目录文件
 MoveNamespaceFiles $baseDir $namespace "app\src\androidTest"
+
+# 移动测试目录文件
+MoveNamespaceFiles $baseDir $namespace "app\src\test"
 
 # 移除scripts目录
 Remove-Item -Path ".\scripts" -Recurse -Force
