@@ -13,8 +13,7 @@
   "sourceName": "ComposeAppTemplate",
   "preferNameDirectory": true,
   "symbols": {
-    "namespace": {
-      "shortName": "ns",
+    "ns": {
       "type": "parameter",
       "dataType": "text",
       "replaces": "com.welldone.composeapptemplate",
@@ -26,9 +25,13 @@
     {
       "description": "修改项目结构匹配命名空间",
       "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+      "applyFileRenamesToArgs": [
+        "ns",
+        "sourceName"
+      ],
       "args": {
         "executable": "powershell",
-        "args": "-NoProfile -ExecutionPolicy Bypass -File \"./scripts/NamespaceMatch.ps1\"",
+        "args": "-NoProfile -ExecutionPolicy Bypass -File \"./scripts/Setup.ps1\"",
         "redirectStandardOutput": false,
         "redirectStandardError": false
       },
