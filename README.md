@@ -1,20 +1,24 @@
-#简介
-TODO: 简要介绍你的项目。通过此节说明此项目的目标或动机。
+# Android Compose App应用模板
 
-#入门
-TODO: 指导用户在自己的系统上设置和运行代码。在本节中，可讨论:
-1.	安装过程
-2.	软件依赖项
-3.	最新发布
-4.	API 参考
+包含基础界面
 
-#生成与测试
-TODO: 说明并展示如何生成代码和运行测试。
+## 需求
 
-#参与
-TODO: 说明其他用户和开发人员可如何帮助改善代码。
+- .net8.0 sdk [点击下载](https://dotnet.microsoft.com/download/dotnet/8.0)
 
-如需深入了解如何创建优秀的自述文件，请参阅以下[指南](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops)。还可从以下自述文件中寻求灵感:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## 安装
+
+1. 克隆项目
+2. 双击`安装模板.bat`运行
+
+## 使用
+1. 打开命令行工具
+2. 定位到项目根目录，例如`cd D:\AndroidComposeApp`
+3. 创建项目
+   ```shell
+   dotnet new compose.app -n MyComposeApp --ns com.mycompany.mycomposeapp
+   ```
+   - `-n` 指定项目名称
+   - `--ns` 指定项目命名空间
+4. 执行命令时，会提示是否运行脚本`Setup.ps1`，输入`y`并回车。此脚本的作用是修改项目目录结构使其匹配命名空间。
+5. 使用 Android Studio 打开项目即可开始编码。
