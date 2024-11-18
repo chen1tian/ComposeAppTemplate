@@ -1,4 +1,4 @@
-package com.welldone.composeapptemplate.utils.theme
+package com.welldone.composeapptemplate.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
