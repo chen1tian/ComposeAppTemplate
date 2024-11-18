@@ -1,6 +1,6 @@
 # Android Compose App应用模板
 
-包含基础界面
+集成基础界面，依赖注入，Perference，Room等等。
 
 ## 需求
 
