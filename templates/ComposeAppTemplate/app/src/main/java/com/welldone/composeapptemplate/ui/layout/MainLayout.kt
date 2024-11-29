@@ -70,23 +70,22 @@ fun MainLayout(
         Scaffold(
             modifier = Modifier.padding(4.dp),
             topBar = {
-                TopAppBar(
-                    modifier = Modifier,
-                    navigationIcon = {
-                        Icon(
-                            painter = painterResource(state.curNavItem.iconId),
-                            contentDescription = null
-                        )
-                    },
-                    title = { Text(text = stringResource(id = state.curNavItem.nameId)) },
-                    actions = {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-//                            Text(text = "V1.0.0")
-                        }
-                    }
-                )
+                Row(
+                    modifier = Modifier
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        painter = painterResource(state.curNavItem.iconId),
+                        contentDescription = null
+                    )
+                    Text(
+                        text = stringResource(id = state.curNavItem.nameId),
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(start = 8.dp)
+                    )
+                }
             }
         ) { innerPadding ->
             Surface(
