@@ -50,10 +50,6 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        // 进程间通信
-        val policy = ThreadPolicy.Builder().permitAll().build()
-        StrictMode.setThreadPolicy(policy)
-
         // 初始化日志
         initLog()
     }
