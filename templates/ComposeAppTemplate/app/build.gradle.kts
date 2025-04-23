@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -32,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -78,6 +79,8 @@ dependencies {
     // 依赖注入
     implementation("com.google.dagger:hilt-android:2.50")
     kapt("com.google.dagger:hilt-android-compiler:2.50")
+    // Hilt Navigation Compose 依赖注入 使用Nav导航用此包进行注入(hiltViewModel)
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     // json
     implementation("com.google.code.gson:gson:2.8.8")
     // datastore-preferences
@@ -90,4 +93,6 @@ dependencies {
     implementation("com.jakewharton.timber:timber:5.0.1")
     // 截图
     implementation("dev.shreyaspatil:capturable:2.1.0")
+    // 表单
+    implementation("com.github.benjamin-luescher:compose-form:0.2.8")
 }
